@@ -4,36 +4,47 @@
 \usepackage[english]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage{geometry}
-\usepackage{array}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{xltabular}
-\usepackage{graphicx}
-
-\setlist[itemize]{leftmargin=*}
-\linespread{1.15}
 \geometry{a4paper,
     left={0.5in},
     top={0.4in}, 
     right={0.5in},
     bottom={0.4in}
 }
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[colorlinks=true, urlcolor=violet]{hyperref}
+\usepackage{xltabular}
+\usepackage{graphicx}
+
+\setlist[itemize]{leftmargin=*}
+\linespread{1.15}
 \newcommand\clink[1]{{\usefont{T1}{lmtt}{m}{n} #1 }}
 \pagenumbering{gobble}
 \newenvironment{csection}[2]{
     \textbf{#1} 
     \vspace{0.15cm} 
     \hrule 
-    \leavevmode\newline
+    \leavevmode
     {#2}
 }{}
-\newenvironment{frcontent}[4]{
+\newenvironment{frcontent}[5]{
     {
         \textbf{#1} \leavevmode\newline
-        {\footnotesize	
-            \ifthenelse{\equal{#2}{}}{}{{#2 \leavevmode\newline}}
-            \ifthenelse{\equal{#3}{}}{}{{#3 \leavevmode\newline}}
-            \ifthenelse{\equal{#4}{}}{}{{\textit{#4}}}
+        {\footnotesize
+            \ifthenelse{\equal{#2}{}}{}{{#2}\textbf{ · }}%
+            \ifthenelse{\equal{#3}{}}{}{{\textbf{#3}}}
+            \leavevmode\newline
+            \ifthenelse{\equal{#4}{}}{}{{#4 \leavevmode\newline}}
+            \ifthenelse{\equal{#5}{}}{}{{\textit{#5}}}
+        }
+    }
+}{}
+\newenvironment{frsimple}[3]{
+    {
+        \textbf{#1} \leavevmode\newline
+        {\footnotesize
+            \ifthenelse{\equal{#2}{}}{}{{#2}\textbf{ · }}%
+            \ifthenelse{\equal{#3}{}}{}{{\textbf{#3}}}
         }
     }
 }{}

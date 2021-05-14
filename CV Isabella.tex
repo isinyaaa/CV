@@ -1,0 +1,179 @@
+%!TeX program = pdflatex
+\documentclass{resume}
+
+\usepackage{tikz}
+\usepackage{fontawesome5}
+
+\newcommand{\bars}[1]{
+    \tikz[overlay, remember picture] \foreach\i in {1,...,3}
+        \draw ({(\i - 2)*4pt},0) rectangle +(2pt,{(\i + 1)*2 pt});
+    \tikz[overlay, remember picture] \foreach\i in {1,...,#1}
+        \fill ({(\i - 2)*4pt - 2.5pt},0) rectangle +(2pt,{(\i + 1)*2 pt});
+}
+
+\begin{document}
+
+\fontfamily{ppl}\selectfont
+
+\noindent
+\begin{tabularx}{\linewidth}{@{}m{0.78\textwidth} m{0.2\textwidth}@{}}
+{
+    \Large{Isabella Basso do Amaral} \newline
+    \small{
+        \clink{
+            \href{mailto:isabellabdoamaral@usp.br}{\faIcon{envelope}\ isabellabdoamaral@usp.br} \textbf{·}
+            \href{https://wa.me/5511995100304}{\faIcon{whatsapp}}
+            \href{https://telegram.me/isinyaaa}{\faIcon{telegram}}
+            {\fontdimen2\font=0.75ex +55 11 995 100 304} 
+            \textbf{·}
+            \href{https://github.com/isinyaaa}{\faIcon{github} @isinyaaa}
+        } \newline
+          São Paulo, Brasil\newline
+          {\footnotesize avid Linux user \faIcon{linux} \textbf{·} open-source \faIcon{heart}}
+        %{\footnotesize *Rio de Janeiro durante a quarentena}
+    }
+} & 
+{
+    \centering
+    \frame{\includegraphics[width=3cm]{images/photo.png}}
+}
+\end{tabularx}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}*{2}{X}@{}}
+% left side %
+{
+    \csection{Experiência (mainline)}{\small
+        \begin{itemize}
+            \item \frcontent{Backend Developer}
+            {Data Machina}
+            {Python, Google Cloud, Firebase, Docker, Git}
+            {
+                Desenvolvo um chatbot para WhatsApp;
+                
+                Sou referência para a equipe;
+                
+                Mentoro outro estagiário e auxilio em diversas
+                atividades de manutenção
+            }
+            {Fevereiro de 2021 em diante}
+            \item \frcontent{Programadora}
+            {Freelancer}
+            {Python \& Java}
+            {
+                Desenvolvi soluções para problemas acadêmicos diversos
+            }
+            {Outubro de 2020 em diante}
+        \end{itemize}
+    }
+    \csection{Educação}{\small
+        \begin{itemize}
+            % item 1 %
+            \item \frcontent{B.S. Ciências Moleculares\newline Enfâse em matemática \& computação}
+            {Universidade de São Paulo}
+            {Cursando}
+            {
+                Cientista por natureza, busco a interdisciplinaridade nessa
+                graduação desafiadora;
+
+                Estudante de iniciação científica em \href{https://github.com/isinyaaa/wimpa}{teoria de grafos} \& teoria
+                de categorias
+            }
+            {2020 -- atual}
+            \item \frcontent{Tecnólogo em Ciência de Dados}
+            {Universidade Estácio de Sá}
+            {Cursando}
+            {
+                Estudo ciência de dados no tempo livre, realizando uma graduação
+                complementar
+            }
+            {2021 -- atual}
+            %\item \frcontent{B.S. Física}
+            %{Universidade de São Paulo}
+            %{}
+            %{Interrompido}
+            %{2020}
+            \item \frcontent{Curso técnico integrado em Automação Industrial}
+            {Instituto Federal Fluminense}
+            {Concluído}
+            {
+                Organizei \href{http://lattes.cnpq.br/9507659630401803}{diversos projetos e apresentações científicas};
+                Destaque na turma
+            }
+            {2017 -- 2019}
+        \end{itemize}
+    }
+} 
+% end left side %
+& 
+% right side %
+{
+    \csection{Projetos (side quests)}{\small
+        \begin{itemize}
+            \item \frsimple{Linux sys-admin}
+            {Tech}
+            {Bash}
+            %{
+            %    Busco me qualificar como sys-admin por utilizar Linux no dia-a-dia e
+            %    me interessar pelo funcionamento do sistema, assim como em utilizá-lo
+            %    plenamente
+            %}
+            %{}
+            \item \frsimple{Design de ilustrações técnicas}
+            {Art}
+            {\LaTeX}
+            %{
+            %    Produzi {\href{https://github.com/isinyaaa/werk-yago-pub}{material didático}} para diversas disciplinas
+            %    de curso técnico;
+            %    
+            %    Atualmente faço ilustrações técnicas para um
+            %    projeto de {\href{https://petfisica.home.blog/olimpet/}{ensino de física}}
+            %}
+            %{}
+            \item \frsimple{Tradução}
+            {English}
+            {inglês--português}
+            %{
+            %    Traduzi diversas obras de
+            %    filosofia para publicação (artigos e livro)
+            %}
+            %{}
+            \item \frsimple
+            {Resolução de problemas de computação matemática \clink{\href{https://projecteuler.net/}{[projecteuler.net/]}}}
+            {Maths}
+            {Julia, Haskell \& Python}
+            %{
+            %    Resolvi diversos problemas do acervo para afiar minhas
+            %    habilidades analíticas
+            %}
+            %{}
+            \item \frsimple{Construção de UI \clink{\href{https://github.com/isinyaaa}{[github.com/isinyaaa]}}}
+            {Tinkering}
+            {C\# \& XAML}
+            %{
+            %    Fruto de um interesse de longa data em interfaces e interações para
+            %    além do CLI
+            %}
+            %{}
+        \end{itemize}
+    }
+    \csection{Habilidades}{\small
+      	\begin{itemize}
+      		\item \textbf{Programação}
+      		{\footnotesize
+      			\begin{itemize}
+      			\item[{\bars{3}}] Fluente: \LaTeX (2 anos e meio) \& Python (4 anos)
+      			\item[{\bars{2}}] Intermitente: Bash (1 ano) \& C\# (1 ano)
+      			\item[{\bars{1}}] Básico: C/C++, Haskell, Java, JavaScript, Julia \& Lua
+      		\end{itemize}}
+      		\item \textbf{Linguagens}
+      		{\footnotesize
+      			\begin{itemize}
+      			\item[{\bars{3}}] Fluente: Português (nativa), Inglês (certificado C1)
+      			\item[{\bars{1}}] Básico: Alemão, Espanhol \& Francês
+      		\end{itemize}}
+      	\end{itemize}
+    }
+}
+\end{tabularx}
+\end{center}
+\end{document}
