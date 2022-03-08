@@ -6,7 +6,7 @@
 \usepackage{geometry}
 \geometry{a4paper,
     left={0.5in},
-    top={0.4in}, 
+    top={0.4in},
     right={0.5in},
     bottom={0.4in}
 }
@@ -21,9 +21,9 @@
 \newcommand\clink[1]{{\usefont{T1}{lmtt}{m}{n} #1 }}
 \pagenumbering{gobble}
 \newenvironment{csection}[2]{
-    \textbf{#1} 
-    \vspace{0.15cm} 
-    \hrule 
+    \textbf{#1}
+    \vspace{0.15cm}
+    \hrule
     \leavevmode
     {#2}
 }{}
