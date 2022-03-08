@@ -1,0 +1,221 @@
+%!TeX program = pdflatex
+\documentclass{resume}
+
+\usepackage{tikz, lmodern, amsmath, amssymb}
+
+\definecolor{papercolor}{HTML}{282828}
+\definecolor{textcolor}{HTML}{eeeeee}
+
+%\usepackage[pagecolor={papercolor}]{pagecolor}
+%\color{textcolor}
+
+
+\usepackage{fontawesome5}
+
+\newcommand{\bars}[1]{
+    \tikz[overlay, remember picture] \foreach\i in {1,...,3}
+        \draw ({(\i - 2)*4pt},0) rectangle +(2pt,{(\i + 1)*2 pt});
+    \tikz[overlay, remember picture] \foreach\i in {1,...,#1}
+        \fill ({(\i - 2)*4pt - 2.5pt},0) rectangle +(2pt,{(\i + 1)*2 pt});
+}
+
+\begin{document}
+
+\fontfamily{ppl}\selectfont
+
+\noindent
+\begin{tabularx}{\linewidth}{@{}m{1\textwidth}}%{@{}m{0.78\textwidth} m{0.2\textwidth}@{}}
+{
+    \Large{Isabella Basso do Amaral} \newline
+    \small{
+        \clink{
+            \href{mailto:isabellabdoamaral@usp.br}{\faIcon{envelope}\ isabellabdoamaral@usp.br}
+            \href{https://telegram.me/isinyaaa}{\faIcon{telegram}}
+            \href{https://gitlab.com/isinyaaa}{\faIcon{gitlab}}
+            \href{https://github.com/isinyaaa}{\faIcon{github} @isinyaaa}
+        } \newline
+          São Paulo, Brazil\newline
+        {\footnotesize Linux \faIcon{linux} enthusiast \textbf{·} \faIcon{heart} FOSS}
+        %{\footnotesize *Rio de Janeiro durante a quarentena}
+    }
+} %&
+%{
+%    \centering
+%    \frame{\includegraphics[width=3cm]{images/photo.png}}
+%}
+\end{tabularx}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{}*{2}{X}@{}}
+% left side %
+{
+    \csection{Work experience}{\small
+        \begin{itemize}
+            \item \frcontent{Software Engineer}
+            {Red Hat}
+            {Django, SQL, Python, Containers, Bash, C, Git, Remote team collaboration, CI}
+            {
+                I currently work with static analysis CI solutions for Fedora/RHEL RPM packages.
+            }
+            {November 2021 onwards}
+            \item \frcontent{Backend Developer}
+            {Data Machina}
+            {Python, Google Cloud, Firebase, Docker, Git, Agile Methods}
+            {
+                - I mentored an intern;
+
+                - led the development of an AR solution;
+
+                - previously was developing a WhatsApp chatbot;
+
+                Team leading talent;
+
+                Assisted and led various key maintenance tasks (deploying, setting up CI, etc.).
+            }
+            {February 2021 up to October 2021}
+            \item \frcontent{Programmer}
+            {Freelancer}
+            {Python \& Java}
+            {
+                - Part-time computer science tutoring;
+
+                - Freelancing for scientific applications.
+            }
+            {July 2020 up to January 2021}
+        \end{itemize}
+    }
+    \csection{Side projects}{\small
+        \begin{itemize}
+            \item \frsimple{LKCAMP group \clink{\href{https://lkcamp.dev/}{[lkcamp.dev/]}}}
+            {C, Linux}
+            {Group member, independent Linux Kernel contributor}
+            \item \frsimple{Kernel mentorship}
+            {Bash, C, Linux}
+            {Mentored by AMD GPU engineer, independent Linux Kernel contributor}
+            %\item \frsimple{Data Girls Neuron\clink{\href{https://www.linkedin.com/company/data-girls-neuron/}{[Linked In]}}}
+            %{Data Science, events and community support}
+            %{Member}
+            \item \frsimple{INOVA USP lab}
+            {Bash, Linux}
+            {Sys-admin}
+            \item \frsimple{Cryptography and Cybersecurity study club}
+            {Cryptography, Cybersecurity}
+            {Group member}
+            %{
+            %    Busco me qualificar como sys-admin por utilizar Linux no dia-a-dia e
+            %    me interessar pelo funcionamento do sistema, assim como em utilizá-lo
+            %    plenamente
+            %}
+            %{}
+            %\item \frsimple{Technical illustration design}
+            %{Art}
+            %{\LaTeX}
+            %{
+            %    Produzi {\href{https://github.com/isinyaaa/werk-yago-pub}{material didático}} para diversas disciplinas
+            %    de curso técnico;
+            %
+            %    Atualmente faço ilustrações técnicas para um
+            %    projeto de {\href{https://petfisica.home.blog/olimpet/}{ensino de física}}
+            %}
+            %{}
+            %\item \frsimple{Translation}
+            %{English}
+            %{english--portuguese}
+            %{
+            %    Traduzi diversas obras de
+            %    filosofia para publicação (artigos e livro)
+            %}
+            %{}
+            %\item \frsimple
+            %{Algorithmic math problem resolutions \clink{\href{https://projecteuler.net/}{[projecteuler.net/]}}}
+            %{Maths}
+            %{Julia, Haskell \& Python}
+            %{
+            %    Resolvi diversos problemas do acervo para afiar minhas
+            %    habilidades analíticas
+            %}
+            %{}
+            %\item \frsimple{Bare Windows' UIs \clink{\href{https://github.com/isinyaaa}{[github.com/isinyaaa]}}}
+            %{Tinkering}
+            %{C\# \& XAML}
+            %{
+            %    Fruto de um interesse de longa data em interfaces e interações para
+            %    além do CLI
+            %}
+            %{}
+        \end{itemize}
+    }
+}
+% end left side %
+&
+% right side %
+{
+    \csection{Education}{\small
+        \begin{itemize}
+            % item 1 %
+            \item \frcontent{Molecular Sciences BSc\newline emphasis on maths \& computer science}
+            {Universidade de São Paulo}
+            {Ongoing}
+            {
+                As a scientist by nature, I thrive in interdisciplinary contexts;
+                \href{http://cecm.usp.br/}{that's exactly what my degree is about}.
+
+                Scientific guidance student:
+
+                - currently looking into the \href{https://isinyaaa.github.io}{Linux Kernel \& its graphics stack};
+                %- currently looking into FPGAs \& optimization;
+
+                - previous topics were algorithms \& \href{https://github.com/isinyaaa/uni-latex/tree/main/combinatorics}{graph theory}.
+            }
+            {2020 onwards}
+            %\item \frcontent{Associate degreee in Data Science}
+            %{Universidade Estácio de Sá}
+            %{Ongoing}
+            %{
+            %    I started studying data science topics to sharpen my
+            %    understanding and improve my skills.
+            %}
+            %{from 2021 onwards}
+            %\item \frcontent{Physics BSc}
+            %{Universidade de São Paulo}
+            %{Interrupted}
+            %{
+            %    The degree I started at;
+
+            %    As a passionate student I used to wonder about the HOWs;
+
+            %    Then I found a degree more in line with my goals.
+            %}
+            %{2020}
+            \item \frcontent{Industrial Automation Technical School}
+            {Instituto Federal Fluminense}
+            {Concluded}
+            {
+                Organized \href{http://lattes.cnpq.br/9507659630401803}{several projects and scientific presentations};
+
+                I was my class' top student
+            }
+            {2017 -- 2019}
+        \end{itemize}
+    }
+    \csection{Skills}{\small
+      	\begin{itemize}
+      		\item \textbf{Programming}
+      		{\footnotesize
+      			\begin{itemize}
+      			\item[{\bars{3}}] ($\geqslant$2y): \LaTeX\, (3y) \& Python (4y)
+      			\item[{\bars{2}}] ($\geqslant$1y): Bash, C, C\# \& Java
+      			\item[{\bars{1}}] ($<$1y): C++, Haskell \& Rust
+      		\end{itemize}}
+      		\item \textbf{Languages}
+      		{\footnotesize
+      			\begin{itemize}
+      			\item[{\bars{3}}] Portuguese (native), English (C1 + 6mo interchange + translation experience)
+      			\item[{\bars{2}}] Spanish
+      			\item[{\bars{1}}] French \& German
+      		\end{itemize}}
+      	\end{itemize}
+    }
+}
+\end{tabularx}
+\end{center}
+\end{document}
