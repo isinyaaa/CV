@@ -16,7 +16,7 @@
     \tikz[overlay, remember picture] \foreach\i in {1,...,3}
         \draw ({(\i - 2)*4pt},0) rectangle +(2pt,{(\i + 1)*2 pt});
     \tikz[overlay, remember picture] \foreach\i in {1,...,#1}
-        \fill ({(\i - 2)*4pt - 2.5pt},0) rectangle +(2pt,{(\i + 1)*2 pt});
+        \fill ({(\i - 2)*4pt - 3.5pt},0) rectangle +(2pt,{(\i + 1)*2 pt});
 }
 
 \begin{document}
@@ -86,11 +86,17 @@
     \csection{Side projects}{\small
         \begin{itemize}
             \item \frsimple{LKCAMP group \clink{\href{https://lkcamp.dev/}{[lkcamp.dev/]}}}
-            {C, Linux}
+            {Bash, C, Git, Profiling Tools, Linux}
             {Group member, independent Linux Kernel contributor}
-            \item \frsimple{Kernel mentorship}
-            {Bash, C, Linux}
-            {Mentored by AMD GPU engineer, independent Linux Kernel contributor}
+            \item \frsimple{Mentorship on the Linux Kernel}
+            {Bash, C, Git, Profiling Tools, Linux}
+            {Mentored by an AMD GPU engineer,
+                \clink{
+                    \href{
+                        https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/log/?qt=author&q=Isabella+Basso
+                    }{independent Linux Kernel contributor}
+                }
+            }
             %\item \frsimple{Data Girls Neuron\clink{\href{https://www.linkedin.com/company/data-girls-neuron/}{[Linked In]}}}
             %{Data Science, events and community support}
             %{Member}
