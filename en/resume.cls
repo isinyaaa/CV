@@ -15,7 +15,8 @@
 \usepackage{xcolor}
 
 \definecolor{nvidia}{HTML}{79bb01}
-\usepackage[colorlinks=true, urlcolor=nvidia]{hyperref}
+\definecolor{intel}{HTML}{007cc6}
+\usepackage[colorlinks=true, urlcolor=violet]{hyperref}
 \usepackage{xltabular}
 \usepackage{graphicx}
 
