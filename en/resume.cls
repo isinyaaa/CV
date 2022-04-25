@@ -1,49 +1,48 @@
 \LoadClass[14pt]{extreport}
 
-\usepackage{ifthen}
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage{geometry}
+\RequirePackage{ifthen}
+\RequirePackage{polyglossia}
+\setdefaultlanguage[]{english}
+\PolyglossiaSetup{english}{indentfirst=false}
+\RequirePackage{geometry}
 \geometry{a4paper,
     left={0.5in},
     top={0.4in},
     right={0.5in},
     bottom={0.4in}
 }
-\usepackage{array}
-\usepackage{enumitem}
-\usepackage{xcolor}
+\RequirePackage{array, enumitem, xcolor}
 
 \definecolor{nvidia}{HTML}{79bb01}
 \definecolor{intel}{HTML}{007cc6}
-\usepackage[colorlinks=true, urlcolor=violet]{hyperref}
-\usepackage{xltabular}
-\usepackage{graphicx}
+\RequirePackage[colorlinks=true, urlcolor=violet]{hyperref}
+\RequirePackage{xltabular}
+\RequirePackage{graphicx}
 
 \setlist[itemize]{leftmargin=*}
 \linespread{1.15}
 \newcommand\clink[1]{{\usefont{T1}{lmtt}{m}{n} #1 }}
 \pagenumbering{gobble}
-\newenvironment{csection}[2]{
-    \textbf{#1}
-    \vspace{0.15cm}
-    \hrule
-    \leavevmode
-    {#2}
-}{}
-\newenvironment{frcontent}[5]{
+\newenvironment{csection}[1]{
+    \textbf{#1}%
+    \nolinebreak\vspace{0.15cm}%
+    \hrule%
+    \leavevmode%
+    \small%
+    \begin{itemize}
+}{\end{itemize}}
+\newcommand\frcontent[5]{
     {
         \textbf{#1} \leavevmode\newline
         {\footnotesize
-            \ifthenelse{\equal{#2}{}}{}{{#2}\textbf{ · }}%
-            \ifthenelse{\equal{#3}{}}{}{{\textbf{#3}}}
+            \ifthenelse{\equal{#2}{}}{}{({\textit{#2}})} \ifthenelse{\equal{#3}{}}{}{{#3}\textbf{ · }}%
+            \ifthenelse{\equal{#4}{}}{}{{\textbf{#4}}}
             \leavevmode\newline
-            \ifthenelse{\equal{#4}{}}{}{{#4 \leavevmode\newline}}
-            \ifthenelse{\equal{#5}{}}{}{{\textit{#5}}}
+            \ifthenelse{\equal{#5}{}}{}{{#5 \leavevmode\newline}}
         }
     }
-}{}
-\newenvironment{frsimple}[3]{
+}
+\newcommand\frsimple[3]{
     {
         \textbf{#1} \leavevmode\newline
         {\footnotesize
@@ -51,4 +50,4 @@
             \ifthenelse{\equal{#3}{}}{}{{\textbf{#3}}}
         }
     }
-}{}
+}
