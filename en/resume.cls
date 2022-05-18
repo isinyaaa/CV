@@ -31,17 +31,13 @@
     \small%
     \begin{itemize}
 }{\end{itemize}}
-\newcommand\frcontent[5]{
-    {
-        \textbf{#1} \leavevmode\newline
-        {\footnotesize
-            \ifthenelse{\equal{#2}{}}{}{({\textit{#2}})} \ifthenelse{\equal{#3}{}}{}{{#3}\textbf{ · }}%
-            \ifthenelse{\equal{#4}{}}{}{{\textbf{#4}}}
-            \leavevmode\newline
-            \ifthenelse{\equal{#5}{}}{}{{#5 \leavevmode\newline}}
-        }
-    }
-}
+\newenvironment{frcontent}[4]{
+    {\textbf{#1} \leavevmode\newline}
+    \footnotesize
+    \ifthenelse{\equal{#2}{}}{}{({\textit{#2}})} \ifthenelse{\equal{#3}{}}{}{{#3}\textbf{ · }}%
+    \ifthenelse{\equal{#4}{}}{}{{\textbf{#4}}}
+    \leavevmode\newline
+}{\leavevmode\newline}
 \newcommand\frsimple[3]{
     {
         \textbf{#1} \leavevmode\newline
