@@ -1,6 +1,5 @@
 \LoadClass[14pt]{extreport}
 
-\RequirePackage{ifthen}
 \RequirePackage{polyglossia}
 \setdefaultlanguage[]{english}
 \PolyglossiaSetup{english}{indentfirst=false}
@@ -11,31 +10,41 @@
     right={0.5in},
     bottom={0.4in}
 }
-\RequirePackage{array, enumitem, xcolor}
 
-\definecolor{nvidia}{HTML}{79bb01}
-\definecolor{intel}{HTML}{007cc6}
-\RequirePackage[colorlinks=true, urlcolor=violet]{hyperref}
-\RequirePackage{xltabular}
-\RequirePackage{graphicx}
-
-\setlist[itemize]{leftmargin=*}
-\linespread{1.15}
-\newcommand\clink[1]{{\usefont{T1}{lmtt}{m}{n} #1 }}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
 \pagenumbering{gobble}
+\linespread{1.15}
+
+\RequirePackage{xcolor}
+% \definecolor{papercolor}{HTML}{282828}
+% \definecolor{textcolor}{HTML}{eeeeee}
+% \RequirePackage[pagecolor={papercolor}]{pagecolor}
+% \color{textcolor}
+\definecolor{nvidia-green}{HTML}{79bb01}
+\definecolor{intel-blue}{HTML}{007cc6}
+\RequirePackage[colorlinks=true, urlcolor=violet]{hyperref}
+
+\RequirePackage{enumitem}
+\setlist[itemize]{leftmargin=*}
+
+\RequirePackage{ifthen}
+\newcommand\clink[1]{{\usefont{T1}{lmtt}{m}{n} #1 }}
 \newenvironment{csection}[1]{
-    \textbf{#1}%
+    {\normalsize\textbf{#1}}%
     \nolinebreak\vspace{0.15cm}%
     \hrule%
     \leavevmode%
     \small%
+    \vspace{-20pt}%
     \begin{itemize}
 }{\end{itemize}}
 \newenvironment{frcontent}[4]{
-    {\textbf{#1} \leavevmode\newline}
-    \footnotesize
-    \ifthenelse{\equal{#2}{}}{}{({\textit{#2}})} \ifthenelse{\equal{#3}{}}{}{{#3}\textbf{ · }}%
-    \ifthenelse{\equal{#4}{}}{}{{\textbf{#4}}}
+    {\small\textbf{#1}}\newline%
+    \footnotesize%
+    \ifthenelse{\equal{#2}{}}{}{{#2}\newline}%
+    \ifthenelse{\equal{#3}{}}{}{{\textit{#3}}\newline}%
+    \ifthenelse{\equal{#4}{}}{}{{\textbf{#4}}}%
     \leavevmode\newline
 }{\leavevmode\newline}
 \newcommand\frsimple[3]{
@@ -47,3 +56,5 @@
         }
     }
 }
+
+\RequirePackage{array, xltabular, graphicx, fontawesome5}

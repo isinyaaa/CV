@@ -1,13 +1,6 @@
 \documentclass{resume}
 
-\usepackage{tikz, lmodern, amsmath, amssymb}
-\usepackage{fontawesome5}
-
-\definecolor{papercolor}{HTML}{282828}
-\definecolor{textcolor}{HTML}{eeeeee}
-
-%\usepackage[pagecolor={papercolor}]{pagecolor}
-%\color{textcolor}
+\usepackage{tikz, amsmath, amssymb}
 
 \newcommand{\bars}[1]{
     \tikz[overlay, remember picture] \foreach\i in {1,...,3}
@@ -17,6 +10,7 @@
 }
 
 \begin{document}
+
 \noindent
 \begin{tabularx}{\linewidth}{@{}m{1\textwidth}}
     % {@{}m{0.78\textwidth} m{0.2\textwidth}@{}}
@@ -35,13 +29,12 @@
             \footnotesize
             \faIcon{linux} Linux enthusiast/independent contributor \textbf{·} \faIcon{heart} OSS
         }
-        %{\footnotesize *Rio de Janeiro durante a quarentena}
     }
 }
 % &
 % {
 %    \centering
-%    \frame{\includegraphics[width=3cm]{images/photo.png}}
+%    \frame{\includegraphics[width=3cm]{photo.png}}
 % }
 \end{tabularx}
 
@@ -49,9 +42,6 @@
 % \begin{flushleft}
 {
     \small
-    % As a young woman who's grown up in this century, I've lived through the
-    % most innovative technological advancements in human history, but not
-    % without a glooming feeling creeping through it.
     
     I hold a firm belief that we should build sustainable things to help
     maintain and improve what good things we've achieved so far as a species,
@@ -73,56 +63,43 @@
 \begin{tabularx}{\linewidth}[t]{@{}*{2}{X}@{}}
     \begin{csection}{Education}
         \item \frcontent{Molecular Sciences BSc\newline emphasis on maths \& computer science}
-        {August 2020 onwards}
         {University of São Paulo}
+        {August 2020 onwards}
         {Ongoing}
         {
             As a scientist by nature, I thrive in interdisciplinary contexts;
             \href{http://cecm.usp.br/}{that's exactly what my degree is about}.
 
             In my degree:
-
             \begin{itemize}
-                \item I'm looking into research topics dealing with operating
-                    systems (specifically low-latency ones) optimizing use
-                    cases regarding server applications, and will start
-                    contributing to Microsoft's Demikernel project -- research
-                    project starts in August 2022;
+                \item I'm trying to understand what makes some graphics APIs
+                    great, and how we can match the convenience of closed
+                    source ones with open source alternatives, improving their
+                    adoption in scientific aplications like machine learning.
             \end{itemize}
             
-            Demikernel: 
-            \clink{
-                \href{https://github.com/demikernel/demikernel}
-                {[github.com/]}
-            }
-            
             As a scientific guidance student:
-
             \begin{itemize}
                 \item I studied algorithms \&
                     \href{https://github.com/isinyaaa/uni-latex/tree/main/combinatorics}{graph
                     theory};
-
                 \item I studied and presented topics of high complexity in our
                     local study group.
             \end{itemize}
         }
-        %\item \frcontent{Physics BSc}
-        %{Universidade de São Paulo}
-        %{Interrupted}
-        %{
-        %    The degree I started at;
-        %    As a passionate student I used to wonder about the HOWs;
-        %    Then I found a degree more in line with my goals.
-        %}
-        %{2020}
+        % \item \frcontent{Physics BSc}
+        % {Universidade de São Paulo}
+        % {2020}
+        % {Interrupted}
+        % {
+        %   blablabla
+        % }
         \item \frcontent{Industrial Automation Technical High School}
-        {2017 -- 2019}
         {Federal Fluminense Institute}
+        {2017 up to 2019}
         {Concluded}
         {
             As a top student:
-
             \begin{itemize}
                 \item I helped my friends in my free time and led class
                     projects;
@@ -141,14 +118,13 @@
     \vspace{-16.5pt}%
     \begin{csection}{Work experience}
         \item \frcontent{Software Engineer}
-        {November 2021 onwards}
         {Red Hat}
+        {November 2021 onwards}
         {Django, SQL, Python, Containers, Bash, C, Git, Remote team collaboration, CI}
         {
             I currently work with static analysis CI solutions for Fedora/RHEL RPM packages.
             
             As a software engineer:
-            
             \begin{itemize}
                 \item I'm updating a legacy Python codebase;
 
@@ -160,14 +136,13 @@
             \end{itemize}
         }
         \item \frcontent{Internship}
-        {February 2021 up to October 2021}
         {Data Machina}
+        {February 2021 up to October 2021}
         {Python, Google Cloud, Firebase, Docker, Git, Agile Methods, Augmented Reality (AR), Research}
         {
             Data Machina is a Brazilian startup company with a focus on data science solutions.
 
             As an intern:
-
             \begin{itemize}
                 \item I mentored another intern;
 
@@ -189,47 +164,49 @@
 \begin{center}
 \begin{tabularx}{\linewidth}[t]{@{}*{2}{X}@{}}
     \begin{csection}{Side projects}
-        \item \frcontent{OSS group member}
-        {June 2021 onwards}
-        {LKCAMP \clink{\href{https://lkcamp.dev/}{[lkcamp.dev/]}}}
-        {C, Git, Profiling Tools, Kernel, Linux}
+        \item \frcontent{Google Summer of Code participant}
+        {\clink{\href{https://summerofcode.withgoogle.com/}{[summerofcode.withgoogle.com]}}}
+        {May 2022 up to September 2022}
+        {C, Git, Kernel, Mailing lists}
         {
-            LKCAMP is a group from Unicamp (the state university of Campinas) that has as its
-            purpose to help students contribute to open source software.
+            I'm currently working on a project to improve unit test coverage in
+            AMD's Linux kernel graphics driver.
             
-            As a hackathon participant:
-            
+            As a GSoC student:
             \begin{itemize}
-                \item I helped my group and engaged profusely with the
-                    community.
-            \end{itemize}
-            
-            Then, as a group member:
-            
-            \begin{itemize}
-                \item I gave a lecture about
-                    \href{
-                        https://www.youtube.com/watch?v=d5DutGFJhh0
-                    }{Kernel Device Drivers};
+                \item I've had to deal with production hardware code,
+                    documenting, testing, and improving it;
 
-                \item I also helped organize another hackathon.
+                \item I'll present my work internally to AMD and also in an
+                    international conference.
             \end{itemize}
+            
+            \mbox{My GSoC project:
+            \clink{
+                \href{https://summerofcode.withgoogle.com/programs/2022/projects/6AoBcunH}
+                {[summerofcode.withgoogle.com/]}
+            }}
+            
+            My talk:
+            \clink{
+                \href{https://indico.freedesktop.org/event/2/abstracts/78/}
+                {[indico.freedesktop.org/]}
+            }
         }
         \item \frcontent{Linux Kernel mentee}
-        {July 2021 onwards}
         {Mentored by AMD GPU engineer Rodrigo Siqueira}
+        {July 2021 onwards}
         {Bash, C, Git, Profiling Tools, Kernel}
         {
             Siqueira helped me in my journey as an independent Linux Kernel
             contributor.
             
             As a mentee:
-            
             \begin{itemize}
-                \item I learned many things about the Linux GPU/DRM subsystem;
+                \item I learned many things about Linux' GPU subsystem (DRM);
             
                 \item As part of my learning I fixed many compilation warnings
-                    in the AMD driver;
+                    in AMD's driver;
             
                 \item I also helped with internal code restructuring to make
                     FPU code more maintainable;
@@ -249,6 +226,31 @@
                 {[git.kernel.org/]}
             }
         }
+        \item \frcontent{LKCAMP group member}
+        {\clink{\href{https://lkcamp.dev/}{[lkcamp.dev]}}}
+        {June 2021 onwards}
+        {C, Git, Profiling Tools, Kernel, Linux}
+        {
+            LKCAMP is an OSS-focused group from Unicamp (the state university
+            of Campinas) that has as its purpose to help students contribute to
+            open source software.
+            
+            As a hackathon participant:
+            \begin{itemize}
+                \item I helped my group and engaged profusely with the
+                    community.
+            \end{itemize}
+
+            Then, as a group member:
+            \begin{itemize}
+                \item I gave a lecture about
+                    \href{
+                        https://www.youtube.com/watch?v=d5DutGFJhh0
+                    }{Kernel Device Drivers};
+
+                \item I also helped organize another hackathon.
+            \end{itemize}
+        }
         %\item \frsimple{Data Girls Neuron\clink{\href{https://www.linkedin.com/company/data-girls-neuron/}{[Linked In]}}}
         %{Data Science, events and community support}
         %{Member}
@@ -259,28 +261,18 @@
         % {Cryptography, Cybersecurity}
         % {Group member}
         %{
-        %    Busco me qualificar como sys-admin por utilizar Linux no dia-a-dia e
-        %    me interessar pelo funcionamento do sistema, assim como em utilizá-lo
-        %    plenamente
         %}
         %{}
         %\item \frsimple{Technical illustration design}
         %{Art}
         %{\LaTeX}
         %{
-        %    Produzi {\href{https://github.com/isinyaaa/werk-yago-pub}{material didático}} para diversas disciplinas
-        %    de curso técnico;
-        %
-        %    Atualmente faço ilustrações técnicas para um
-        %    projeto de {\href{https://petfisica.home.blog/olimpet/}{ensino de física}}
         %}
         %{}
         %\item \frsimple{Translation}
         %{English}
         %{english--portuguese}
         %{
-        %    Traduzi diversas obras de
-        %    filosofia para publicação (artigos e livro)
         %}
         %{}
         %\item \frsimple
@@ -288,8 +280,6 @@
         %{Maths}
         %{Julia, Haskell \& Python}
         %{
-        %    Resolvi diversos problemas do acervo para afiar minhas
-        %    habilidades analíticas
         %}
         %{}
     \end{csection}
@@ -308,7 +298,7 @@
             \begin{itemize}
             \item[{\bars{3}}] Portuguese (native), English (C1 + 6mo interchange + translation experience)
             \item[{\bars{2}}] Spanish \& German
-            \item[{\bars{1}}] French
+            \item[{\bars{1}}] French \& Finnish
         \end{itemize}}
     \end{csection}
 \end{tabularx}
