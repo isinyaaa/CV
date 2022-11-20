@@ -31,12 +31,14 @@
 \RequirePackage{ifthen}
 \newcommand\clink[1]{{\usefont{T1}{lmtt}{m}{n} #1 }}
 \newenvironment{csection}[1]{
+    \noindent%
     {\normalsize\textbf{#1}}%
-    \nolinebreak\vspace{0.15cm}%
-    \hrule%
+    \vphantom{Pp}%
+    \vspace{0.1cm}
+    \hrule
     \leavevmode%
     \small%
-    \vspace{-20pt}%
+    \vspace{-5pt}%
     \begin{itemize}
 }{\end{itemize}}
 \newenvironment{frcontent}[4]{
